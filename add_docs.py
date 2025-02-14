@@ -19,7 +19,9 @@ conn.commit()
 
 # Truncate table 
 
-cursor.execute("TRUNCATE TABLE docs")
+cursor.execute("DELETE FROM docs")
+conn.commit()
+
 
 # Add new documents
 documents = [

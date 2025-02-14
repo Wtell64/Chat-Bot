@@ -17,7 +17,7 @@ if not OPENAI_API_KEY:
     raise ValueError("Missing OpenAI API key. Set it in the .env file.")
 
 # OPEN AI ile baglanti kurma
-chat_model = ChatOpenAI(model_name="gpt-4", openai_api_key=OPENAI_API_KEY, max_tokens=250)
+chat_model = ChatOpenAI(model_name="gpt-4o", openai_api_key=OPENAI_API_KEY, max_tokens=250)
 
 # Local db ile vector store yapma (RAG icin)
 vectorstore = Chroma(persist_directory="./docs_db", embedding_function=OpenAIEmbeddings(model="text-embedding-ada-002"))
